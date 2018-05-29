@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace HelperMethods.Controllers
 {
@@ -19,6 +15,15 @@ namespace HelperMethods.Controllers
             return View((object)message);
         } // end Index()
 
+        public ActionResult ExternalHelper()
+        {
+            ViewBag.Fruits = new string[] { "Мандарин", "Киви", "Банан" };
+            ViewBag.Cities = new string[] { "Минск", "Варшава", "Ванкувер" };
+
+            string message = "Это HTML-элемент: <input>";
+
+            return View((object)message);
+        } // end ExternalHelper()
 
 
 
