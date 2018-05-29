@@ -1,0 +1,34 @@
+﻿@model HelperMethods.Models.User
+
+@{
+    ViewBag.Title = "CreateUser";
+}
+
+<h2>Создать пользователя</h2>
+
+<form action="/User/CreateUser" method="post">
+    <div class="item">
+        <label>UserId</label>
+        <input name="userId" value="@Model.UserId" />
+    </div>
+    <div class="item">
+        <label>Имя</label>
+        <input name="FirstName" value="@Model.FirstName" />
+    </div>
+    <div>
+        <label>Фамилия</label>
+        <input name="LastName" value="@Model.LastName" />
+    </div>
+    <input type="submit" value="Отправить" />
+</form>
+
+
+
+
+
+
+
+
+
+
+

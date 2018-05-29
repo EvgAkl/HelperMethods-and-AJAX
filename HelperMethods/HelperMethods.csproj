@@ -104,10 +104,12 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\ExternalHelper.cshtml" />
     <Content Include="Views\Home\DisplayIssue.cshtml" />
+    <Content Include="Views\User\CreateUser.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
