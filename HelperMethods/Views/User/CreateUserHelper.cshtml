@@ -1,0 +1,26 @@
+﻿@model HelperMethods.Models.User
+
+@{
+    ViewBag.Title = "CreateUserHelper";
+}
+
+<h2>Создать пользователя</h2>
+
+@using (Html.BeginRouteForm("Default", null, FormMethod.Post, new { @class = "userCssClass", data_formType = "user" }))
+{
+    <div class="item">
+        <label>UserId</label>
+        @Html.TextBox("userId")
+    </div>
+    <div class="item">
+        <label>Имя</label>
+        @Html.TextBox("firstName")
+    </div>
+    <div class="item">
+        <label>Фамилия</label>
+        @Html.TextBox("lastName")
+    </div>
+    <input type="submit" value="отправить" />
+}
+
+

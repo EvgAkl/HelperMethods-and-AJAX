@@ -1,5 +1,4 @@
-﻿
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using HelperMethods.Models;
 
 namespace HelperMethods.Controllers
@@ -21,6 +20,17 @@ namespace HelperMethods.Controllers
         {
             return View(user);
         } // end CreateUser() #2 
+
+        public ActionResult CreateUserHelper()
+        {
+            return View(new User());
+        } // end CreateUserHelper() #1
+
+        [HttpPost]
+        public ActionResult CreateUserHelper(User user)
+        {
+            return View(user);
+        } // end CreateUserHelper() #2
 
 
 

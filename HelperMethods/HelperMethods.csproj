@@ -105,6 +105,7 @@
     <Content Include="Views\Home\ExternalHelper.cshtml" />
     <Content Include="Views\Home\DisplayIssue.cshtml" />
     <Content Include="Views\User\CreateUser.cshtml" />
+    <Content Include="Views\User\CreateUserHelper.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
