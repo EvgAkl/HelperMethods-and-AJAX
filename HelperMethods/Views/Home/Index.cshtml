@@ -3,6 +3,19 @@
     Layout = null;
 }
 
+@helper ListArrayStringItems(string[] items)
+{
+    <ul>
+        @foreach (string value in items)
+        {
+        <li>@value</li>
+        }
+    </ul>
+}
+
+
+
+
 <!DOCTYPE html>
 
 <html>
@@ -13,24 +26,16 @@
 <body>
     <div>
         Фрукты:
-        @foreach(string fruit in ViewBag.Fruits)
-        {
-            <b>@fruit</b>
-        }
+        @ListArrayStringItems(ViewBag.Fruits)
     </div>
     <div>
         Города:
-        @foreach (string city in ViewBag.Cities)
-        {
-            <b>@city</b>
-        }
+        @ListArrayStringItems(ViewBag.Cities)
     </div>
     <div>
         Сообщение:
         <p>@Model</p>
     </div>
-
-
 
 </body>
 </html>
