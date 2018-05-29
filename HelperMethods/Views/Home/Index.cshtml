@@ -1,0 +1,36 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        Фрукты:
+        @foreach(string fruit in ViewBag.Fruits)
+        {
+            <b>@fruit</b>
+        }
+    </div>
+    <div>
+        Города:
+        @foreach (string city in ViewBag.Cities)
+        {
+            <b>@city</b>
+        }
+    </div>
+    <div>
+        Сообщение:
+        <p>@Model</p>
+    </div>
+
+
+
+</body>
+</html>
