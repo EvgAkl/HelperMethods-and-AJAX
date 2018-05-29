@@ -103,6 +103,7 @@
     <Content Include="Web.config" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\ExternalHelper.cshtml" />
+    <Content Include="Views\Home\DisplayIssue.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />

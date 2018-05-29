@@ -25,7 +25,15 @@ namespace HelperMethods.Controllers
             return View((object)message);
         } // end ExternalHelper()
 
+        public ActionResult DisplayIssue()
+        {
+            ViewBag.Fruits = new string[] { "Мандарин", "Киви", "Банан" };
+            ViewBag.Cities = new string[] { "Минск", "Варшава", "Ванкувер" };
 
+            string message = "Это HTML-элемент: <input>";
+
+            return View((object)message);
+        } // end DisplayIssue()
 
 
 

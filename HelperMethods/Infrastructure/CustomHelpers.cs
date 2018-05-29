@@ -22,10 +22,12 @@ namespace HelperMethods.Infrastructure
             return new MvcHtmlString(tag.ToString());
         } // end MvcHtmlString()
 
-
-
-
-
+        public static MvcHtmlString DisplayMessage(this HtmlHelper html, string msg)
+        {
+            string encodedMessage = html.Encode(msg);
+            string result = String.Format("Сообщение: <p>{0}</p>", encodedMessage);
+            return new MvcHtmlString(result);
+        }
 
     } // end class
 } // end namespace
