@@ -1,0 +1,39 @@
+﻿@model HelperMethods.Models.User
+
+@{
+    ViewBag.Title = "CreateUserLayoutHelper";
+    Html.EnableClientValidation(false);
+}
+
+<h2>Создать пользователя</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="item">
+        <label>UserId</label>
+        @Html.Editor("UserId")
+    </div>
+    <div class="item">
+        <label>Имя</label>
+        @Html.Editor("FirstName")
+    </div>
+    <div class="item">
+        <label>Фамилия</label>
+        @Html.EditorFor(user => user.LastName)
+    </div>
+    <div class="item">
+        <label>Роль</label>
+        @Html.EditorFor(user => user.Role)
+    </div>
+    <div class="item">
+        <label>Дата рождения</label>
+        @Html.EditorFor(user => user.BirthDate)
+    </div>
+    <input type="submit" value="отправить" />
+
+}
+
+
+
+
+

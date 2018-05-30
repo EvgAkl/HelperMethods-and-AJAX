@@ -43,7 +43,16 @@ namespace HelperMethods.Controllers
             return View(user);
         } // end CreateUserGenericHelper() #2
 
+        public ActionResult CreateUserLayoutHelper()
+        {
+            return View(new User());
+        } // end CreateuserLayoutHelper() #1
 
+        [HttpPost]
+        public ActionResult CreateUserLayoutHelper(User user)
+        {
+            return View(user);
+        } // end CreateuserLayoutHelper() #2
 
 
 
