@@ -51,7 +51,7 @@ namespace HelperMethods.Controllers
         [HttpPost]
         public ActionResult CreateUserLayoutHelper(User user)
         {
-            return View(user);
+            return View("DisplayUser", user);
         } // end CreateuserLayoutHelper() #2
 
 
