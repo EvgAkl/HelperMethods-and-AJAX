@@ -10,24 +10,23 @@
 @using (Html.BeginForm())
 {
     <div class="item">
-        <label>UserId</label>
-        @Html.Editor("UserId")
+        @Html.EditorFor(m => m.UserId)
     </div>
     <div class="item">
-        <label>Имя</label>
-        @Html.Editor("FirstName")
+        @Html.LabelFor(m => m.FirstName)
+        @Html.EditorFor(m => m.FirstName)
     </div>
     <div class="item">
-        <label>Фамилия</label>
-        @Html.EditorFor(user => user.LastName)
+        @Html.LabelFor(m => m.LastName)
+        @Html.EditorFor(m => m.LastName)
     </div>
     <div class="item">
-        <label>Роль</label>
-        @Html.EditorFor(user => user.Role)
+        @Html.LabelFor(m => m.Role)
+        @Html.EditorFor(m => m.Role)
     </div>
     <div class="item">
-        <label>Дата рождения</label>
-        @Html.EditorFor(user => user.BirthDate)
+        @Html.LabelFor(m => m.BirthDate)
+        @Html.EditorFor(m => m.BirthDate)
     </div>
     <input type="submit" value="отправить" />
 

@@ -7,23 +7,22 @@
 <h2>Данные пользователя</h2>
 
 <div class="item">
-    @Html.LabelFor(m => m.UserId)
-    @Html.Display("UserId")
+    @Html.DisplayFor(m => m.UserId)
 </div>
 <div class="item">
-    @Html.Label("Имя")
-    @Html.Display("FirstName")
+    @Html.LabelFor(m => m.FirstName)
+    @Html.DisplayFor(m => m.FirstName)
 </div>
 <div class="item">
-    @Html.Label("Фамилия")
+    @Html.LabelFor(m => m.LastName)
     @Html.DisplayFor(m => m.LastName)
 </div>
 <div class="item">
-    @Html.Label("Role")
+    @Html.LabelFor(m => m.Role)
     @Html.DisplayFor(m => m.Role)
 </div>
 <div class="item">
-    @Html.Label("Дата рождения")
+    @Html.LabelFor(m => m.BirthDate)
     @Html.DisplayFor(m => m.BirthDate)
 </div>
 

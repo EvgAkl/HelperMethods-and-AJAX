@@ -5,10 +5,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace HelperMethods.Models
 {
-    [DisplayName("новый пользователь")]
+    [DisplayName("новый юзер")]
     public class User
     {
-        [HiddenInput(DisplayValue = false)]
+        [HiddenInput(DisplayValue=false)]
         public int UserId { get; set; }
         [DisplayName("Имя")]
         [UIHint("MultilineText")]
@@ -20,7 +20,7 @@ namespace HelperMethods.Models
         public DateTime BirthDate { get; set; }
         [DisplayName("Адрес")]
         public Addres HomeAddress { get; set; }
-        [DisplayName("Подтвердил регистрацию")]
+        [DisplayName("Подтвердил регистрацию?")]
         public bool IsApproved { get; set; }
         [DisplayName("Роль")]
         public Role Role { get; set; }
