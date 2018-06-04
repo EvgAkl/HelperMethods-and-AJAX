@@ -12,6 +12,21 @@
     };
 }
 
+<script type="text/javascript">
+    function OnBegin() {
+        console.log('Это сообщение получено из обработчика onBegin')
+    }
+    function OnSuccess(data) {
+        console.log('Это сообщение получено из обработчика onSuccess: ' + data)
+    }
+    function OnFailure(request, error) {
+        console.log('Это сообщение получено из обработчика onFailure: ' + error)
+    }
+    function OnComplete(request, status) {
+        console.log('Это сообщение получено из обработчика onComplete: ' + status)
+    }
+</script>
+
 <h2>Данные пользователей</h2>
 
 <div id="loading" class="load" style="display: none">
@@ -47,7 +62,11 @@
                              new { selectedRole = role},
                              new AjaxOptions {
                                     UpdateTargetId = "tableBody",
-                                    Url = Url.Action("GetPeopleData", new { selectedRole = role})
+                                    Url = Url.Action("GetPeopleData", new { selectedRole = role}),
+                                    OnBegin = "OnBegin",
+                                    OnSuccess = "OnSuccess",
+                                    OnComplete = "OnComplete",
+                                    OnFailure = "OnFailure"
                              })
         </div>
     }
