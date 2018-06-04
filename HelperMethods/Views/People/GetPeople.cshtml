@@ -8,7 +8,7 @@
         UpdateTargetId = "tableBody",
         Url = Url.Action("GetPeopleData"),
         LoadingElementDuration = 2000,
-        LoadingElementId = "loading"
+        LoadingElementId = "loading",
     };
 }
 
@@ -38,5 +38,20 @@
         <button type="submit">Отобразить</button>
     </div>
 }
+
+<div>
+    @foreach (string role in Enum.GetNames(typeof(Role)))
+    {
+        <div class="ajaxlink">
+            @Ajax.ActionLink(role, "GetPeopleData",
+                             new { selectedRole = role},
+                             new AjaxOptions {
+                                    UpdateTargetId = "tableBody",
+                                    Url = Url.Action("GetPeopleData", new { selectedRole = role})
+                             })
+        </div>
+    }
+</div>
+
 
 
