@@ -22,24 +22,21 @@ namespace HelperMethods.Controllers
             return View();
         }
 
-        public ActionResult GetPeaople()
+        public ActionResult GetPeople(string selectedRole = "All")
         {
-            return View(UserData);
+            return View((Object)selectedRole);
         }
 
-        [HttpPost]
-        public ActionResult GetPeaple(string selectedRole)
+        public PartialViewResult GetPeopleData(string selectedRole = "All")
         {
-            if (selectedRole == "All" || selectedRole == null)
-                return View(UserData);
-            else
+            IEnumerable<User> users = UserData;
+            if (selectedRole != "All")
             {
-                Role roleSelected = (Role)Enum.Parse(typeof(Role), selectedRole);
-                return View(UserData.Where(u => u.Role == roleSelected));
+                Role selected = (Role)Enum.Parse(typeof(Role), selectedRole);
+                users = UserData.Where(p => p.Role == selected);
             }
+            return PartialView(users);
         }
-
-
 
     } // end controller
 } // end namespace
